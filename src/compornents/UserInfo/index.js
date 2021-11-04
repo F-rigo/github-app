@@ -8,7 +8,7 @@ const UserInfo = ({userinfo}) => (
       <a href={`https://github.com/${userinfo.login}`} target="_blank" rel="noopener noreferrer"> {userinfo.username}</a>
     </h1>
     <ul>
-      <li>Repositórios:{userinfo.repos}</li>
+      <li>Repositórios: {userinfo.repos}</li>
       <li>Seguidores: {userinfo.followers}</li>
       <li>Seguindo: {userinfo.following}</li>
     </ul>
