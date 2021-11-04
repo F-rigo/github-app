@@ -17,7 +17,7 @@ const AppContent = ({
   getStarred
 }) => (
   <div className="app">
-  <Search handleSearch={handleSearch}/>
+  <Search isDisabled={isFetching} handleSearch={handleSearch}/>
   {isFetching ? <div className="loader">Loading...</div> : null}
   {!!userinfo && <UserInfo userinfo={userinfo}/>}
   {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred}/>}
