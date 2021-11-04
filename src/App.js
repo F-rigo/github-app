@@ -12,7 +12,9 @@ class App extends Component {
           repos: [],
           starred: [],
           isFetching: false,
-    }}
+    }
+    this.handleSearch = this.handleSearch.bind(this); // bind this to the function is more performant
+  }
   getGitHubApi(username, type) {
     const internalUser = username ? `/${username}` : '';
     const internalType = type ? `/${type}` : '';
@@ -80,7 +82,7 @@ class App extends Component {
       repos={this.state.repos}
       starred={this.state.starred}
       isFetching={this.state.isFetching}
-      handleSearch={(e) => this.handleSearch(e)}
+      handleSearch={this.handleSearch}
       getRepos={this.getRepos('repos')}
       getStarred={this.getRepos('starred')}
     />
